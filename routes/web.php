@@ -12,5 +12,10 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
+});
+
+Route::get('/about', function () {
+    $halaman = 'Ini halaman about';
+    return view('about', ['halman' => $halaman]);
 });
