@@ -18,17 +18,19 @@
                     <th scope="col">Opsi</th>
                 </thead>
                 <tbody>
+                    @foreach($mahasiswa as $mhs)
                     <tr>
-                        <th scope="row">1</th>
-                        <td>Bagas</td>
-                        <td>10101010</td>
-                        <td>asd@yahoo.com</td>
-                        <td>Teknik Kuli</td>
+                        <th scope="row">{{$loop->iteration}}</th>
+                        <td>{{$mhs->nama}}</td>
+                        <td>{{$mhs->nim}}</td>
+                        <td>{{$mhs->email}}</td>
+                        <td>{{$mhs->jurusan}}</td>
                         <td>
                             <a href="" class="badge badge-success">edit</a>
                             <a href="" class="badge badge-danger">delete</a>
                         </td>
                     </tr>
+                    @endforeach
                 </tbody>
             </table>
         </div>
