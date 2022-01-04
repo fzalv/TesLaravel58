@@ -58,7 +58,7 @@ class StudentsController extends Controller
 
         Student::create($request->all());
 
-        return redirect('/students');
+        return redirect('/students')->with('status', 'Data Berhasil ditambahkan!');
     }
 
     /**
