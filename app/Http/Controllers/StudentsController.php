@@ -36,6 +36,7 @@ class StudentsController extends Controller
      */
     public function store(Request $request)
     {
+        // metode store
         // $student = new Student;
         // $student->nama = $request->nama;
         // $student->nim = $request->nim;
@@ -45,13 +46,17 @@ class StudentsController extends Controller
         // $student->save();
 
         // return redirect('/students');
+        // metode store
 
-        Student::create([
-            'nama' => $request->nama,
-            'nim' => $request->nim,
-            'email' => $request->email,
-            'jurusan' => $request->jurusan
-        ]);
+        // metode create
+        // Student::create([
+        //     'nama' => $request->nama,
+        //     'nim' => $request->nim,
+        //     'email' => $request->email,
+        //     'jurusan' => $request->jurusan
+        // ]);
+
+        Student::create($request->all());
 
         return redirect('/students');
     }
