@@ -12,19 +12,23 @@
                 @csrf
                 <div class="form-group">
                     <label for="nama">Nama</label>
-                    <input type="text" class="form-control" id="nama" name="nama" placeholder="Masukan Nama">
+                    <input type="text" class="form-control @error('nama') is-invalid @enderror" id="nama" name="nama" placeholder="Masukan Nama">
+                    @error('nama') <div class="invalid-feedback">{{$message}}</div> @enderror
                 </div>
                 <div class="form-group">
                     <label for="nim">NIM</label>
-                    <input type="text" class="form-control" id="nim" name="nim" placeholder="Masukan NIM">
+                    <input type="text" class="form-control @error('nim') is-invalid @enderror" id="nim" name="nim" placeholder="Masukan NIM">
+                    @error('nim') <div class="invalid-feedback">{{$message}}</div> @enderror
                 </div>
                 <div class="form-group">
                     <label for="email">Email</label>
-                    <input type="text" class="form-control" id="email" name="email" placeholder="Masukan Email">
+                    <input type="text" class="form-control @error('email') is-invalid @enderror" id="email" name="email" placeholder="Masukan Email">
+                    @error('email') <div class="invalid-feedback">{{$message}}</div> @enderror
                 </div>
                 <div class="form-group">
                     <label for="jurusan">Jurusan</label>
-                    <input type="text" class="form-control" id="jurusan" name="jurusan" placeholder="Masukan Jurusan">
+                    <input type="text" class="form-control @error('jurusan') is-invalid @enderror" id="jurusan" name="jurusan" placeholder="Masukan Jurusan">
+                    @error('jurusan') <div class="invalid-feedback">{{$message}}</div> @enderror
                 </div>
 
                 <button type="submit" class="btn btn-primary">Tambah Data</button>
